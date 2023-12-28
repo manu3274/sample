@@ -43,6 +43,10 @@ namespace WindowsFormsApp1
                 conf =JsonSerializer.Deserialize<Dictionary<string, Dictionary<string,string>>>(fs, options);
             };
 
+
+
+
+
             var param = conf["test"];
             Console.WriteLine(param["4"]);
         }
