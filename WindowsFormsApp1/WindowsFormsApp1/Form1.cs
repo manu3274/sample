@@ -22,7 +22,8 @@ namespace WindowsFormsApp1
             Start();
         }
 
-
+        MySocket recv_socket = new MySocket();
+        MySocket send_socket = new MySocket();
 
         public void Start()
         {
@@ -36,12 +37,6 @@ namespace WindowsFormsApp1
                 AllowTrailingCommas = true
             };
 
-
-
-
-
-
-
             Dictionary<string, Dictionary<string, string>> conf = null;
             using (FileStream fs = new FileStream(System.AppDomain.CurrentDomain.BaseDirectory + "config\\config.json", FileMode.Open, FileAccess.Read))
             {
@@ -49,11 +44,18 @@ namespace WindowsFormsApp1
             };
 
 
-
-
-
             var param = conf["test"];
             Console.WriteLine(param["4"]);
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            send_socket.Connect();
+        }
+
+        private void btnListen_Click(object sender, EventArgs e)
+        {
+            recv_socket.Listen();
         }
     }
 }
