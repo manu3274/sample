@@ -37,6 +37,11 @@ namespace WindowsFormsApp1
             };
 
 
+
+
+
+
+
             Dictionary<string, Dictionary<string, string>> conf = null;
             using (FileStream fs = new FileStream(System.AppDomain.CurrentDomain.BaseDirectory + "config\\config.json", FileMode.Open, FileAccess.Read))
             {
