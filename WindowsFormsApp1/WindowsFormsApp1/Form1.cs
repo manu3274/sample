@@ -22,8 +22,8 @@ namespace WindowsFormsApp1
             Start();
         }
 
-        MySocket recv_socket = new MySocket();
-        MySocket send_socket = new MySocket();
+        MySocket recv_socket = new MySocket(null, 1100);
+        MySocket send_socket = new MySocket(null, 1101);
 
         public void Start()
         {
