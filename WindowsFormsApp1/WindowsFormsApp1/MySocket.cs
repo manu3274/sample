@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
@@ -31,6 +32,8 @@ namespace WindowsFormsApp1
             istener.Bind(remoteEP);
             istener.Listen(0);
             socket = istener.Accept();
+            
+            MessageBox.Show("");
 
             socket.Receive(buf);
             Console.WriteLine(buf);
