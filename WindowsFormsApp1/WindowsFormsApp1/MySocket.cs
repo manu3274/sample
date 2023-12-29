@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             // IPアドレスやポートの設定
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             ipAddress = ipHostInfo.AddressList[0];
-            remoteEP = new IPEndPoint(ipAddress, 11000);
+            remoteEP = new IPEndPoint(ipAddress, portno);
         }
 
         public void Listen()
